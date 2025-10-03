@@ -16,3 +16,5 @@ gum={
 result=input("welcome, would you like to buy drinks, chips, or gum? ")
 if result=="drinks":
     print(drinks["name"])
+elif result=="chips":
+    print(chips["name"])
