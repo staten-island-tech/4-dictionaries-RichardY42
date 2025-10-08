@@ -15,6 +15,13 @@ def lang(x):
 
 lang("asgdkelfghsssfttttdtdtdstststtssfiueawhftti")
 #occupy space, should not have to use input func
-spaces(y,t):
+def spaces(n,y,t):
+    occu=0
+    for i in range(n):
+        #print(y[i],t[i])
+        if y[i]=="c"and t[i]=="c":
+            occu+=1
+    return(occu)
+print(spaces(5,"cccc.","c.c.c"))
 
-space("cccc.c.","c.c.c.")
+#TEST ON FIRDAY AHHHHHHHHHHHHHHHHHH

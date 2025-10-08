@@ -18,8 +18,14 @@ langd("Lorsque j'avais six ans j'ai vu, une fois,")"""
 
 def idk(y,t):
     occuty=0
-    for taken in y:
-        if taken in y==taken in t:
+    times=0
+    match1=0
+    match2=0
+    for i in y:
+        times+=1
+    for o in range(times):
+        if "o" in y=="o" in t:
             occuty+=1
     print(occuty)
-idk(".T.TT.","T.")
+    print(times)
+idk(".o.oo.","o..oo")
