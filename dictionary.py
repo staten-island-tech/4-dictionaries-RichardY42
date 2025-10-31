@@ -14,29 +14,36 @@ storeinv=[{
     "price": 2.00,
     "type": "gum"
 }]
-done=False
+buying=True
 cart=[]
-
-while done==False:
+receipt=0
+while buying:
     print("What would you like to buy?")
     result=input("drinks  chips  gum ")
-    if result=="drinks":
-        cart+=[storeinv[0]["name"],storeinv[0]["price"],storeinv[0]["type"]]
-        # cart+=[drinks["price"]]
-    elif result=="chips":
-        cart+=[storeinv[1]["name"],storeinv[1]["price"],storeinv[1]["type"]]
-        # cart+=[chips["price"]]
-    elif result=="gum":
-        cart+=[storeinv[2]["name"],storeinv[2]["price"],storeinv[2]["type"]]
-        # cart+=[gum["price"]]
+    result("drinks")=0
+    result("chips")=1
+    result("gum")=2
+    
+    cart.append(result("drinks")["price"])
+
     ans=input("would you like to continue? y/n ")
     if ans == "y":
-        done=False
+        buying=True
     elif ans=="n":
-        done=True
+        buying=False
         print(cart)
-        for 
-        print(f"Total: ${sum(cart[storeinv["price"]])}")
+        print(f"price{receipt}")
         
         
-            
+            if result=="drinks":
+        receipt+=2.5
+        cart+=[storeinv[0]["type"],storeinv[0]["name"],storeinv[0]["price"]]
+        print(receipt)
+    elif result=="chips":
+        receipt+=3
+        cart+=[storeinv[1]["type"],storeinv[1]["name"],storeinv[1]["price"]]
+        print(receipt)
+    elif result=="gum":
+        receipt+=2
+        cart+=[storeinv[2]["type"],storeinv[2]["name"],storeinv[2]["price"]]
+        print(receipt)
