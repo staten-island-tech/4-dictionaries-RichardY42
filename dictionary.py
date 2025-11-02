@@ -18,13 +18,12 @@ buying=True
 cart=[]
 receipt=0
 while buying:
-    print("What would you like to buy?")
-    result=input("drinks  chips  gum ")
-    result("drinks")=0
-    result("chips")=1
-    result("gum")=2
-    
-    cart.append(result("drinks")["price"])
+    print("What would you like to buy? 1. drinks 2. chips 3. gum ")
+    result=int(input("1 2 or 3: "))
+    result-=1
+    formed=storeinv[result]
+    cart.append(formed)
+    receipt+=(formed["price"])
 
     ans=input("would you like to continue? y/n ")
     if ans == "y":
@@ -32,10 +31,11 @@ while buying:
     elif ans=="n":
         buying=False
         print(cart)
-        print(f"price{receipt}")
+        print(f"price:{receipt}")
         
         
-            if result=="drinks":
+"""
+    if result=="drinks":
         receipt+=2.5
         cart+=[storeinv[0]["type"],storeinv[0]["name"],storeinv[0]["price"]]
         print(receipt)
@@ -46,4 +46,4 @@ while buying:
     elif result=="gum":
         receipt+=2
         cart+=[storeinv[2]["type"],storeinv[2]["name"],storeinv[2]["price"]]
-        print(receipt)
+        print(receipt) """
